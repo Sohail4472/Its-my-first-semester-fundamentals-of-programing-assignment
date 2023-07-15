@@ -1,0 +1,39 @@
+1 
+2  /*
+3  Name    Sohail Ahmed 
+4  father name  MEHARULLAH JAN
+5  Roll    num 37
+6	*/
+7  #include <stdio.h>
+8  int isprime(int num)
+9  {
+10   if (num < 2)
+11       return 0;
+12  for (int z= 2; z * z <= num; z++)
+13	{
+14      if (num % z == 0)
+15          return 0;
+16   }
+17  return 1;
+18  }
+19  int main() {
+20   int input;
+21    while (1) {                                              22  printf("PLEASE ENTER A NUMBER BETWEEN 2 and 100: ");
+23       scanf("%d", &input);
+24       if (input >= 2 && input <= 100) {
+25            int result = isprime(input);
+26           if (result == 1)
+27               printf("THIS NUMBEER IS PRIME.\n");
+28           else
+29               printf("THIS NUMBER IS NOT PRIME.\n");
+30           break;
+31      } else {
+32           printf(" THIS NUMBER IS OUT OF RANGE . PRESS 1 to RETRY: ");
+33           int retry;
+34           scanf("%d", &retry);
+35            if (retry != 1)
+36               break;
+37       }
+38   }
+39   return 0;
+40  }
